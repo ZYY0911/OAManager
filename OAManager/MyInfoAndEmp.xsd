@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MyInfoAndEmp" targetNamespace="http://tempuri.org/MyInfoAndEmp.xsd" xmlns:mstns="http://tempuri.org/MyInfoAndEmp.xsd" xmlns="http://tempuri.org/MyInfoAndEmp.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OASQLConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OASQLConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OAManager.Properties.Settings.GlobalReference.Default.OASQLConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OASQLConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  myinfo.name, myinfo.sid, myinfo.birth, myinfo.joinwork, myinfo.sex, myinfo.nation, myinfo.birthlocation, myinfo.marry, myinfo.political, myinfo.country, 
+               myinfo.education, myinfo.photo, employmentinfo.jobtitle, employmentinfo.department, employmentinfo.jointime, employmentinfo.overtime, 
+               employmentinfo.typename, employmentinfo.worknum
+FROM     employmentinfo INNER JOIN
+               myinfo ON myinfo.worknum = employmentinfo.worknum</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="name" DataSetColumn="name" />
+              <Mapping SourceColumn="sid" DataSetColumn="sid" />
+              <Mapping SourceColumn="birth" DataSetColumn="birth" />
+              <Mapping SourceColumn="joinwork" DataSetColumn="joinwork" />
+              <Mapping SourceColumn="sex" DataSetColumn="sex" />
+              <Mapping SourceColumn="nation" DataSetColumn="nation" />
+              <Mapping SourceColumn="birthlocation" DataSetColumn="birthlocation" />
+              <Mapping SourceColumn="marry" DataSetColumn="marry" />
+              <Mapping SourceColumn="political" DataSetColumn="political" />
+              <Mapping SourceColumn="country" DataSetColumn="country" />
+              <Mapping SourceColumn="education" DataSetColumn="education" />
+              <Mapping SourceColumn="photo" DataSetColumn="photo" />
+              <Mapping SourceColumn="jobtitle" DataSetColumn="jobtitle" />
+              <Mapping SourceColumn="department" DataSetColumn="department" />
+              <Mapping SourceColumn="jointime" DataSetColumn="jointime" />
+              <Mapping SourceColumn="overtime" DataSetColumn="overtime" />
+              <Mapping SourceColumn="typename" DataSetColumn="typename" />
+              <Mapping SourceColumn="worknum" DataSetColumn="worknum" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="OASQLConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  myinfo.worknum, myinfo.name, myinfo.sid, myinfo.birth, myinfo.joinwork, myinfo.sex, myinfo.nation, myinfo.birthlocation, myinfo.marry, myinfo.political, 
+               myinfo.country, myinfo.education, myinfo.photo, employmentinfo.jobtitle, employmentinfo.department, employmentinfo.jointime, employmentinfo.overtime, 
+               employmentinfo.typename
+FROM     employmentinfo INNER JOIN
+               myinfo ON employmentinfo.worknum = myinfo.worknum WHERE   myinfo.worknum =@owrknum</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="owrknum" ColumnName="worknum" DataSourceName="OASQL.dbo.myinfo" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@owrknum" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="worknum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="OASQLConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  myinfo.worknum, myinfo.name, myinfo.sid, myinfo.birth, myinfo.joinwork, myinfo.sex, myinfo.nation, myinfo.birthlocation, myinfo.marry, myinfo.political, 
+               myinfo.country, myinfo.education, myinfo.photo, employmentinfo.jobtitle, employmentinfo.department, employmentinfo.jointime, employmentinfo.overtime, 
+               employmentinfo.typename
+FROM     employmentinfo INNER JOIN
+               myinfo ON employmentinfo.worknum = myinfo.worknum WHERE   employmentinfo.department = @department</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="department" ColumnName="department" DataSourceName="OASQL.dbo.employmentinfo" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@department" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="department" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="OASQLConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy2" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy2" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="GetDataBy2" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="FillBy2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  myinfo.worknum, myinfo.name, myinfo.sid, myinfo.birth, myinfo.joinwork, myinfo.sex, myinfo.nation, myinfo.birthlocation, myinfo.marry, myinfo.political, 
+               myinfo.country, myinfo.education, myinfo.photo, employmentinfo.jobtitle, employmentinfo.department, employmentinfo.jointime, employmentinfo.overtime, 
+               employmentinfo.typename
+FROM     employmentinfo INNER JOIN
+               myinfo ON employmentinfo.worknum = myinfo.worknum</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="employmentinfoTableAdapter" GeneratorDataComponentClassName="employmentinfoTableAdapter" Name="employmentinfo" UserDataComponentName="employmentinfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OASQLConnectionString (Settings)" DbObjectName="OASQL.dbo.employmentinfo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[employmentinfo] WHERE (([id] = @Original_id) AND ((@IsNull_worknum = 1 AND [worknum] IS NULL) OR ([worknum] = @Original_worknum)) AND ((@IsNull_jobtitle = 1 AND [jobtitle] IS NULL) OR ([jobtitle] = @Original_jobtitle)) AND ((@IsNull_department = 1 AND [department] IS NULL) OR ([department] = @Original_department)) AND ((@IsNull_jointime = 1 AND [jointime] IS NULL) OR ([jointime] = @Original_jointime)) AND ((@IsNull_overtime = 1 AND [overtime] IS NULL) OR ([overtime] = @Original_overtime)) AND ((@IsNull_typename = 1 AND [typename] IS NULL) OR ([typename] = @Original_typename)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_worknum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="worknum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_worknum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="worknum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jobtitle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jobtitle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_jobtitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="jobtitle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_department" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="department" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_department" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="department" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jointime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jointime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_jointime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jointime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_overtime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="overtime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_overtime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="overtime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_typename" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="typename" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_typename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="typename" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[employmentinfo] ([worknum], [jobtitle], [department], [jointime], [overtime], [typename]) VALUES (@worknum, @jobtitle, @department, @jointime, @overtime, @typename);
+SELECT id, worknum, jobtitle, department, jointime, overtime, typename FROM employmentinfo WHERE (id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@worknum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="worknum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@jobtitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="jobtitle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@department" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="department" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@jointime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jointime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@overtime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="overtime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@typename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="typename" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, worknum, jobtitle, department, jointime, overtime, typename FROM dbo.employmentinfo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[employmentinfo] SET [worknum] = @worknum, [jobtitle] = @jobtitle, [department] = @department, [jointime] = @jointime, [overtime] = @overtime, [typename] = @typename WHERE (([id] = @Original_id) AND ((@IsNull_worknum = 1 AND [worknum] IS NULL) OR ([worknum] = @Original_worknum)) AND ((@IsNull_jobtitle = 1 AND [jobtitle] IS NULL) OR ([jobtitle] = @Original_jobtitle)) AND ((@IsNull_department = 1 AND [department] IS NULL) OR ([department] = @Original_department)) AND ((@IsNull_jointime = 1 AND [jointime] IS NULL) OR ([jointime] = @Original_jointime)) AND ((@IsNull_overtime = 1 AND [overtime] IS NULL) OR ([overtime] = @Original_overtime)) AND ((@IsNull_typename = 1 AND [typename] IS NULL) OR ([typename] = @Original_typename)));
+SELECT id, worknum, jobtitle, department, jointime, overtime, typename FROM employmentinfo WHERE (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@worknum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="worknum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@jobtitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="jobtitle" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@department" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="department" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@jointime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jointime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@overtime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="overtime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@typename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="typename" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_worknum" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="worknum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_worknum" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="worknum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jobtitle" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jobtitle" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_jobtitle" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="jobtitle" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_department" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="department" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_department" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="department" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_jointime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="jointime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_jointime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="jointime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_overtime" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="overtime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_overtime" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="overtime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_typename" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="typename" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_typename" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="typename" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="worknum" DataSetColumn="worknum" />
+              <Mapping SourceColumn="jobtitle" DataSetColumn="jobtitle" />
+              <Mapping SourceColumn="department" DataSetColumn="department" />
+              <Mapping SourceColumn="jointime" DataSetColumn="jointime" />
+              <Mapping SourceColumn="overtime" DataSetColumn="overtime" />
+              <Mapping SourceColumn="typename" DataSetColumn="typename" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="OASQLConnectionString (Settings)" DbObjectName="OASQL.dbo.employmentinfo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT id, worknum, jobtitle, department, jointime, overtime, typename FROM dbo.employmentinfo where worknum=@worknum</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="worknum" ColumnName="worknum" DataSourceName="OASQL.dbo.employmentinfo" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@worknum" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="worknum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MyInfoAndEmp" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MyInfoAndEmp" msprop:Generator_UserDSName="MyInfoAndEmp">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sid" msprop:Generator_ColumnVarNameInTable="columnsid" msprop:Generator_ColumnPropNameInRow="sid" msprop:Generator_ColumnPropNameInTable="sidColumn" msprop:Generator_UserColumnName="sid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="birth" msprop:Generator_ColumnVarNameInTable="columnbirth" msprop:Generator_ColumnPropNameInRow="birth" msprop:Generator_ColumnPropNameInTable="birthColumn" msprop:Generator_UserColumnName="birth" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="joinwork" msprop:Generator_ColumnVarNameInTable="columnjoinwork" msprop:Generator_ColumnPropNameInRow="joinwork" msprop:Generator_ColumnPropNameInTable="joinworkColumn" msprop:Generator_UserColumnName="joinwork" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sex" msprop:Generator_ColumnVarNameInTable="columnsex" msprop:Generator_ColumnPropNameInRow="sex" msprop:Generator_ColumnPropNameInTable="sexColumn" msprop:Generator_UserColumnName="sex" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nation" msprop:Generator_ColumnVarNameInTable="columnnation" msprop:Generator_ColumnPropNameInRow="nation" msprop:Generator_ColumnPropNameInTable="nationColumn" msprop:Generator_UserColumnName="nation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="birthlocation" msprop:Generator_ColumnVarNameInTable="columnbirthlocation" msprop:Generator_ColumnPropNameInRow="birthlocation" msprop:Generator_ColumnPropNameInTable="birthlocationColumn" msprop:Generator_UserColumnName="birthlocation" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marry" msprop:Generator_ColumnVarNameInTable="columnmarry" msprop:Generator_ColumnPropNameInRow="marry" msprop:Generator_ColumnPropNameInTable="marryColumn" msprop:Generator_UserColumnName="marry" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="political" msprop:Generator_ColumnVarNameInTable="columnpolitical" msprop:Generator_ColumnPropNameInRow="political" msprop:Generator_ColumnPropNameInTable="politicalColumn" msprop:Generator_UserColumnName="political" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="country" msprop:Generator_ColumnVarNameInTable="columncountry" msprop:Generator_ColumnPropNameInRow="country" msprop:Generator_ColumnPropNameInTable="countryColumn" msprop:Generator_UserColumnName="country" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="education" msprop:Generator_ColumnVarNameInTable="columneducation" msprop:Generator_ColumnPropNameInRow="education" msprop:Generator_ColumnPropNameInTable="educationColumn" msprop:Generator_UserColumnName="education" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="photo" msprop:Generator_ColumnVarNameInTable="columnphoto" msprop:Generator_ColumnPropNameInRow="photo" msprop:Generator_ColumnPropNameInTable="photoColumn" msprop:Generator_UserColumnName="photo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jobtitle" msprop:Generator_ColumnVarNameInTable="columnjobtitle" msprop:Generator_ColumnPropNameInRow="jobtitle" msprop:Generator_ColumnPropNameInTable="jobtitleColumn" msprop:Generator_UserColumnName="jobtitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="department" msprop:Generator_ColumnVarNameInTable="columndepartment" msprop:Generator_ColumnPropNameInRow="department" msprop:Generator_ColumnPropNameInTable="departmentColumn" msprop:Generator_UserColumnName="department" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jointime" msprop:Generator_ColumnVarNameInTable="columnjointime" msprop:Generator_ColumnPropNameInRow="jointime" msprop:Generator_ColumnPropNameInTable="jointimeColumn" msprop:Generator_UserColumnName="jointime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="overtime" msprop:Generator_ColumnVarNameInTable="columnovertime" msprop:Generator_ColumnPropNameInRow="overtime" msprop:Generator_ColumnPropNameInTable="overtimeColumn" msprop:Generator_UserColumnName="overtime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="typename" msprop:Generator_ColumnVarNameInTable="columntypename" msprop:Generator_ColumnPropNameInRow="typename" msprop:Generator_ColumnPropNameInTable="typenameColumn" msprop:Generator_UserColumnName="typename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="worknum" msprop:Generator_ColumnVarNameInTable="columnworknum" msprop:Generator_ColumnPropNameInRow="worknum" msprop:Generator_ColumnPropNameInTable="worknumColumn" msprop:Generator_UserColumnName="worknum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="employmentinfo" msprop:Generator_TableClassName="employmentinfoDataTable" msprop:Generator_TableVarName="tableemploymentinfo" msprop:Generator_RowChangedName="employmentinfoRowChanged" msprop:Generator_TablePropName="employmentinfo" msprop:Generator_RowDeletingName="employmentinfoRowDeleting" msprop:Generator_RowChangingName="employmentinfoRowChanging" msprop:Generator_RowEvHandlerName="employmentinfoRowChangeEventHandler" msprop:Generator_RowDeletedName="employmentinfoRowDeleted" msprop:Generator_RowClassName="employmentinfoRow" msprop:Generator_UserTableName="employmentinfo" msprop:Generator_RowEvArgName="employmentinfoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="worknum" msprop:Generator_ColumnVarNameInTable="columnworknum" msprop:Generator_ColumnPropNameInRow="worknum" msprop:Generator_ColumnPropNameInTable="worknumColumn" msprop:Generator_UserColumnName="worknum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jobtitle" msprop:Generator_ColumnVarNameInTable="columnjobtitle" msprop:Generator_ColumnPropNameInRow="jobtitle" msprop:Generator_ColumnPropNameInTable="jobtitleColumn" msprop:Generator_UserColumnName="jobtitle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="department" msprop:Generator_ColumnVarNameInTable="columndepartment" msprop:Generator_ColumnPropNameInRow="department" msprop:Generator_ColumnPropNameInTable="departmentColumn" msprop:Generator_UserColumnName="department" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="jointime" msprop:Generator_ColumnVarNameInTable="columnjointime" msprop:Generator_ColumnPropNameInRow="jointime" msprop:Generator_ColumnPropNameInTable="jointimeColumn" msprop:Generator_UserColumnName="jointime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="overtime" msprop:Generator_ColumnVarNameInTable="columnovertime" msprop:Generator_ColumnPropNameInRow="overtime" msprop:Generator_ColumnPropNameInTable="overtimeColumn" msprop:Generator_UserColumnName="overtime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="typename" msprop:Generator_ColumnVarNameInTable="columntypename" msprop:Generator_ColumnPropNameInRow="typename" msprop:Generator_ColumnPropNameInTable="typenameColumn" msprop:Generator_UserColumnName="typename" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:employmentinfo" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
